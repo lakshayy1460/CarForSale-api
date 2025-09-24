@@ -3,6 +3,8 @@ package com.example.CarForSale_api.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.example.CarForSale_api.enums.UserRoleType;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +24,6 @@ public class User {
 
     String password;
 
-    // UserRole role;
+    UserRoleType roleType;
 
 }
