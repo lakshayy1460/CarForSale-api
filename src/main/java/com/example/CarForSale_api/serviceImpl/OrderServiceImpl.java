@@ -1,10 +1,10 @@
-package com.example.CarForSale_api.serviceImpl;
+// package com.example.CarForSale_api.serviceImpl;
 
-import org.springframework.stereotype.Service;
+// import org.springframework.stereotype.Service;
 
-import com.example.CarForSale_api.service.OrderService;
+// import com.example.CarForSale_api.service.OrderService;
 
-@Service
-public class OrderServiceImpl implements OrderService {
+// @Service
+// public class OrderServiceImpl implements OrderService {
 
-}
+// }

@@ -1,9 +1,12 @@
 package com.example.CarForSale_api.entity;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.example.CarForSale_api.enums.CarStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,10 +33,16 @@ public class Car {
 
     String description;
 
-    // status ;
+    CarStatus status;
 
     String sellerId;
 
     List<String> images;
+
+    Date createdAt;
+
+    Date updatedAt;
+
+    boolean isDeleted;
 
 }
