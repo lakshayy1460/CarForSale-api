@@ -1,27 +1,35 @@
 package com.example.CarForSale_api.input;
 
+import java.util.Date;
 import java.util.List;
 
+import com.example.CarForSale_api.enums.CarStatus;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class CarInput {
 
-    String make;
+    private String sellerId;
 
-    String model;
+    private String make;
 
-    int year;
+    private String model;
 
-    int mileage;
+    private int year;
 
-    int price;
+    private int mileage;
 
-    String description;
+    private int price;
 
-    // status
+    private String description;
 
-    String sellerId;
+    private CarStatus status;
 
-    List<String> images;
+    private List<String> images;
+
 }

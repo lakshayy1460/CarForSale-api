@@ -17,7 +17,10 @@ import com.example.CarForSale_api.input.CarInput;
 import com.example.CarForSale_api.repository.CarRepository;
 import com.example.CarForSale_api.service.CarService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class CarServiceImpl implements CarService {
 
     @Autowired
@@ -46,14 +49,19 @@ public class CarServiceImpl implements CarService {
     }
 
     public Car addCar(CarInput carInput) {
+        log.info("Control inside CarServiceImpl.addCar()");
         Car car = modelMapper.map(carInput, Car.class);
 
+        // car.print();
+        // car.setId(null);
         car.setStatus(CarStatus.AVAILABLE);
         car.setCreatedAt(new Date());
         car.setUpdatedAt(new Date());
         car.setDeleted(false);
 
         Car newCar = carRepository.save(car);
+        // newCar.print();
+
         return newCar;
     }
 

@@ -22,8 +22,11 @@ import com.example.CarForSale_api.input.CarInput;
 import com.example.CarForSale_api.service.CarService;
 import com.example.CarForSale_api.utils.ErrorMessageConstants;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/api/cars")
+@Slf4j
 public class CarController {
 
     @Autowired
@@ -60,6 +63,7 @@ public class CarController {
 
     @PostMapping("")
     public Car addCar(@RequestBody CarInput carInput) {
+        log.info("Control inside CarController.addCar()");
         return carService.addCar(carInput);
     }
 
