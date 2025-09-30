@@ -1,6 +1,5 @@
 package com.example.CarForSale_api.input;
 
-import java.util.Date;
 import java.util.List;
 
 import com.example.CarForSale_api.enums.CarStatus;
